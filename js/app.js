@@ -1,185 +1,220 @@
-/* ===============================
-   THEME TOGGLE
-================================ */
-const toggleBtn = document.getElementById('toggle-mode-btn');
-const themeIcon = document.getElementById('theme-icon');
+// ===============================
+// Theme Toggle
+// ===============================
+const toggleBtn = document.getElementById("toggle-mode-btn");
+const themeIcon = document.getElementById("theme-icon");
 const html = document.documentElement;
 
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
+const savedTheme = localStorage.getItem("theme") || "light";
+html.setAttribute("data-theme", savedTheme);
+updateThemeIcon(savedTheme);
 
-toggleBtn.addEventListener('click', () => {
-    const theme = html.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+toggleBtn.addEventListener("click", () => {
+    const newTheme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+    html.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
     updateThemeIcon(newTheme);
 
-    toggleBtn.classList.add('shake');
-    setTimeout(() => toggleBtn.classList.remove('shake'), 500);
+    toggleBtn.classList.add("shake");
+    setTimeout(() => toggleBtn.classList.remove("shake"), 500);
 });
 
 function updateThemeIcon(theme) {
-    themeIcon.className = theme === 'dark'
-        ? 'ri-lightbulb-fill'
-        : 'ri-lightbulb-line';
+    themeIcon.className =
+        theme === "dark" ? "ri-lightbulb-fill" : "ri-lightbulb-line";
 }
 
-/* ===============================
-   SCROLL TO TOP
-================================ */
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+// ===============================
+// Scroll to Top
+// ===============================
+const scrollBtn = document.getElementById("scrollToTopBtn");
 
-window.addEventListener('scroll', () => {
-    scrollToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+window.addEventListener("scroll", () => {
+    scrollBtn.classList.toggle("show", window.scrollY > 300);
 });
 
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* ===============================
-   CARD ANIMATION ON SCROLL
-================================ */
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, { threshold: 0.1 });
+// ===============================
+// Mobile Navbar
+// ===============================
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-document.querySelectorAll('.card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
+navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 });
 
-/* ===============================
-   SEARCH + FILTER + PAGINATION
-================================ */
-const searchInput = document.getElementById('project-search');
-const filterButtons = document.querySelectorAll('.filter-btn');
-const paginationContainer = document.getElementById('pagination-controls');
-const emptyState = document.getElementById('empty-state');
-
-const allCards = Array.from(document.querySelectorAll('.card'));
-
-const ITEMS_PER_PAGE = 6;
+// ===============================
+// Projects Logic (SEARCH + SORT + FILTER + PAGINATION)
+// ===============================
+const itemsPerPage = 10;
 let currentPage = 1;
-let activeCategory = 'all';
+let currentCategory = "all";
+let currentSort = "default";
 
-/* ---------- CORE FILTER ---------- */
-function getFilteredCards() {
-    const searchText = searchInput.value.toLowerCase();
+const searchInput = document.getElementById("project-search");
+const sortSelect = document.getElementById("project-sort");
+const filterBtns = document.querySelectorAll(".filter-btn");
 
-    return allCards.filter(card => {
-        const title = card.querySelector('.card-heading').textContent.toLowerCase();
-        const category = card.dataset.category;
+const projectsContainer = document.querySelector(".projects-container");
+const paginationContainer = document.getElementById("pagination-controls");
 
-        const matchesSearch = title.includes(searchText);
-        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+const allCards = Array.from(document.querySelectorAll(".card"));
 
-        return matchesSearch && matchesCategory;
-    });
-}
-
-/* ---------- EMPTY STATE ---------- */
-function updateEmptyState(visibleCount) {
-    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-}
-
-/* ---------- RENDER PROJECTS ---------- */
-function renderProjects() {
-    const filteredCards = getFilteredCards();
-    const totalItems = filteredCards.length;
-
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-    const paginatedCards = filteredCards.slice(start, end);
-
-    // Hide all cards
-    allCards.forEach(card => card.style.display = 'none');
-
-    // Show current page cards
-    paginatedCards.forEach(card => {
-        card.style.display = 'block';
-    });
-
-    updateEmptyState(totalItems);
-    renderPagination(totalItems);
-}
-
-/* ---------- PAGINATION ---------- */
-function renderPagination(totalItems) {
-    paginationContainer.innerHTML = '';
-    const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-    if (totalPages <= 1) return;
-
-    const createBtn = (label, disabled, onClick) => {
-        const btn = document.createElement('button');
-        btn.className = 'pagination-btn';
-        btn.innerHTML = label;
-        btn.disabled = disabled;
-        btn.onclick = onClick;
-        paginationContainer.appendChild(btn);
-    };
-
-    createBtn('‹', currentPage === 1, () => {
-        currentPage--;
-        renderProjects();
-    });
-
-    for (let i = 1; i <= totalPages; i++) {
-        createBtn(i, false, () => {
-            currentPage = i;
-            renderProjects();
-        }).classList?.add(i === currentPage ? 'active' : '');
-    }
-
-    createBtn('›', currentPage === totalPages, () => {
-        currentPage++;
-        renderProjects();
-    });
-}
-
-/* ---------- EVENTS ---------- */
-searchInput.addEventListener('input', () => {
+// ===============================
+// Events
+// ===============================
+searchInput.addEventListener("input", () => {
     currentPage = 1;
     renderProjects();
 });
 
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+sortSelect.addEventListener("change", () => {
+    currentSort = sortSelect.value;
+    currentPage = 1;
+    renderProjects();
+});
 
-        activeCategory = btn.dataset.filter;
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        currentCategory = btn.dataset.filter;
         currentPage = 1;
         renderProjects();
     });
 });
 
-/* ---------- INITIAL LOAD ---------- */
-renderProjects();
+// ===============================
+// Core Render Function
+// ===============================
+function renderProjects() {
+    let cards = [...allCards];
 
-/* ===============================
-   MOBILE NAVBAR
-================================ */
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // 🔍 Search
+    const searchText = searchInput.value.toLowerCase();
+    if (searchText) {
+        cards = cards.filter(card =>
+            card.querySelector(".card-heading").innerText
+                .toLowerCase()
+                .includes(searchText)
+        );
+    }
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    // 🏷 Category
+    if (currentCategory !== "all") {
+        cards = cards.filter(
+            card => card.dataset.category === currentCategory
+        );
+    }
+
+    // 🔃 Sort
+    switch (currentSort) {
+        case "az":
+            cards.sort((a, b) =>
+                a.querySelector(".card-heading").innerText
+                    .localeCompare(b.querySelector(".card-heading").innerText)
+            );
+            break;
+
+        case "za":
+            cards.sort((a, b) =>
+                b.querySelector(".card-heading").innerText
+                    .localeCompare(a.querySelector(".card-heading").innerText)
+            );
+            break;
+
+        case "newest":
+            cards.reverse();
+            break;
+
+        case "oldest":
+        default:
+            cards = [...cards];
+    }
+
+    // 📄 Pagination
+    const totalItems = cards.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const start = (currentPage - 1) * itemsPerPage;
+    const paginatedCards = cards.slice(start, start + itemsPerPage);
+
+    // Render Cards
+    projectsContainer.innerHTML = "";
+    paginatedCards.forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        projectsContainer.appendChild(card);
+
+        requestAnimationFrame(() => {
+            card.style.transition = "0.4s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        });
     });
+
+    renderPagination(totalPages);
 }
 
+// ===============================
+// Pagination Controls
+// ===============================
+function renderPagination(totalPages) {
+    paginationContainer.innerHTML = "";
+
+    if (totalPages <= 1) return;
+
+    const createBtn = (label, disabled, onClick) => {
+        const btn = document.createElement("button");
+        btn.className = "pagination-btn";
+        btn.innerHTML = label;
+        btn.disabled = disabled;
+        btn.onclick = onClick;
+        return btn;
+    };
+
+    paginationContainer.appendChild(
+        createBtn("‹", currentPage === 1, () => {
+            currentPage--;
+            renderProjects();
+            scrollToProjects();
+        })
+    );
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = createBtn(i, false, () => {
+            currentPage = i;
+            renderProjects();
+            scrollToProjects();
+        });
+        if (i === currentPage) btn.classList.add("active");
+        paginationContainer.appendChild(btn);
+    }
+
+    paginationContainer.appendChild(
+        createBtn("›", currentPage === totalPages, () => {
+            currentPage++;
+            renderProjects();
+            scrollToProjects();
+        })
+    );
+}
+
+function scrollToProjects() {
+    document.getElementById("projects")
+        .scrollIntoView({ behavior: "smooth" });
+}
+
+// ===============================
+// Init
+// ===============================
+renderProjects();
+
 console.log(
-    '%cWant to contribute? https://github.com/YadavAkhileshh/OpenPlayground',
-    'font-size:14px;color:#8b5cf6;'
+    "%cWant to contribute? https://github.com/YadavAkhileshh/OpenPlayground",
+    "color:#8b5cf6;font-size:14px"
 );
