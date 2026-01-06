@@ -43,7 +43,140 @@
     <div id="contributors-placeholder"></div>
 
     <!-- Footer Component Placeholder -->
-    <div id="footer-placeholder"></div>
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Simple Branding -->
+        <div class="footer-brand">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="url(#gradient)" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="2" y1="7" x2="22" y2="7">
+                            <stop offset="0%" stop-color="#8B5CF6"/>
+                            <stop offset="100%" stop-color="#3B82F6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">OpenPlayground</span>
+            </div>
+            <p class="description">
+                An open platform for developers to create, share, and discover interactive web projects.
+            </p>
+        </div>
+
+        <!-- Copyright & Attribution -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 OpenPlayground</p>
+            <p class="attribution">
+                Built by the community
+                <span class="separator">•</span>
+                All projects are open source
+            </p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* ===============================
+   Minimal Footer Styles
+   =============================== */
+.footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border-light);
+    padding: 2rem 0;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Brand Section */
+.footer-brand {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.attribution {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.separator {
+    color: var(--border);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .footer {
+        background: var(--surface-dark);
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-brand,
+.footer-bottom {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.footer-bottom {
+    animation-delay: 0.1s;
+}
+</style>
 
     <!-- Chatbot Component Placeholder -->
     <div id="chatbot-placeholder"></div>
