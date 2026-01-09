@@ -1,5 +1,18 @@
 [
   {
+    "title": "Traffic Sign Memory Game",
+    "category": "Educational / Memory Game",
+    "description": "Interactive memory game where users match pairs of traffic signs to improve road safety knowledge and memory skills.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/TrafficSignMemory/index.html",
+    "icon": "fa-traffic-light",
+    "coverClass": "traffic-memory-cover"
+  },
+  {
     "title": "Interactive Road Safety Quiz",
     "category": "education",
     "description": "An engaging quiz platform testing knowledge of road safety rules, traffic signs, and safe driving practices with multiple difficulty levels and instant feedback.",
