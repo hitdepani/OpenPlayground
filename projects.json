@@ -1516,7 +1516,7 @@
   "category": "utility",
   "description": "Search and explore GitHub user profiles with recent repositories in real time.",
   "tech": ["HTML", "CSS", "JavaScript", "GitHub API"],
-  "link": "./projects/github-user-finder/index.html",
+  "link": "./projects/gitHub-user-finder/index.html",
   "icon": "ri-github-fill",
   "coverClass": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff;"
   } 
