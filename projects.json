@@ -1096,6 +1096,19 @@
     "icon": "ri-keyboard-line",
     "coverStyle": "background: #1e293b; color: #22d3ee;"
   },
+   {
+    "title": "Simple Interest Calculator",
+    "category": "utility",
+    "description": "Calculate simple interest based on principal, rate, and time.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/simple-interest-calculator/index.html",
+    "icon": "ri-percent-line",
+    "coverStyle": "background: #1e293b; color: #22d3ee;"
+  },
   {
     "title": "Truth or Dare",
     "category": "game",
