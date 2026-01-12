@@ -159,10 +159,8 @@ class ComponentLoader {
         // Initialize smooth scrolling
         this.initializeSmoothScrolling();
 
-        // Initialize project functionality
-        if (window.ProjectManager) {
-            new window.ProjectManager();
-        }
+        // Initialize navbar active tracking
+        this.initializeNavActiveTracking();
 
         // Initialize contributors
         if (typeof fetchContributors === 'function') {
@@ -298,6 +296,112 @@ class ComponentLoader {
                 }
             });
         });
+    }
+
+    // ===============================
+    // NAVBAR ACTIVE TRACKING METHODS
+    // ===============================
+
+    initializeNavActiveTracking() {
+        // Set active state on page load
+        this.setActiveNavLink();
+        
+        // Update active state on hash change
+        window.addEventListener('hashchange', () => this.setActiveNavLink());
+        
+        // Update active state on scroll (for sections)
+        window.addEventListener('scroll', () => this.updateActiveOnScroll());
+        
+        // Click handler for nav links
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.nav-link')) {
+                this.handleNavLinkClick(e.target.closest('.nav-link'));
+            }
+        });
+    }
+
+    setActiveNavLink() {
+        const currentPath = window.location.pathname;
+        const currentHash = window.location.hash;
+        
+        // Wait a bit for DOM to be ready
+        setTimeout(() => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Check for hash links (Projects, Contribute)
+            if (currentHash) {
+                const hashLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
+                if (hashLink) {
+                    hashLink.classList.add('active');
+                    return;
+                }
+            }
+            
+            // Check for page links
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                const isCurrentPage = linkHref === currentPath || 
+                    (currentPath.endsWith('/') && linkHref === 'index.html') ||
+                    (currentPath.includes('about') && linkHref === 'about.html') ||
+                    (currentPath.includes('bookmarks') && linkHref === 'bookmarks.html');
+                
+                if (isCurrentPage) {
+                    link.classList.add('active');
+                }
+                
+                // Default active for home page
+                if ((currentPath.endsWith('index.html') || currentPath.endsWith('/')) && 
+                    !currentHash && 
+                    linkHref === '#projects') {
+                    link.classList.add('active');
+                }
+            });
+        }, 100);
+    }
+
+    updateActiveOnScroll() {
+        const sections = document.querySelectorAll('section[id], div[id]');
+        const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+        
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= sectionTop && 
+                window.scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkHref = link.getAttribute('href');
+            if (linkHref === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    handleNavLinkClick(clickedLink) {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => link.classList.remove('active'));
+        clickedLink.classList.add('active');
+        
+        // Close mobile menu if open
+        const navLinksContainer = document.getElementById('navLinks');
+        const navToggle = document.getElementById('navToggle');
+        if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+            navLinksContainer.classList.remove('active');
+            if (navToggle) {
+                navToggle.querySelector('i').className = 'ri-menu-3-line';
+            }
+            document.body.style.overflow = 'auto';
+        }
     }
 }
 
