@@ -2739,6 +2739,15 @@
 "link": "./projects/BinaryBrainGame/index.html",
 "icon": "ri-brain-line",
 "coverStyle": "background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%); color: white;"
-}
+},
+{
+    "title": "Particle Life Simulation",
+    "category": "game",
+    "description": "An interactive particle system where complex, organic behaviors emerge from simple attraction and repulsion rules.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Particle_Life_Simulation/index.html",
+    "icon": "ri-bubble-chart-line",
+    "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #020617 100%); color:#e5e7eb;"
+  }
 
 ]
