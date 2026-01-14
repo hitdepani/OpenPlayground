@@ -1,5 +1,21 @@
 [
   {
+    "title": "Conway's Game of Life",
+    "category": "simulation",
+    "difficulty": "Intermediate",
+    "description": "Interactive cellular automaton simulation implementing Conway's Game of Life with pattern library, speed controls, and real-time visualization.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Canvas API",
+      "LocalStorage"
+    ],
+    "link": "./projects/ConwaysGame/index.html",
+    "icon": "ri-grid-line",
+    "coverStyle": "background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;"
+  },
+  {
     "title": "Advanced To-Do App",
     "category": "productivity",
     "difficulty": "Advanced",
