@@ -2937,6 +2937,16 @@
     "link": "./projects/Recipe Finder/index.html",
     "icon": "ri-restaurant-2-line",
     "coverStyle": "background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #212121;"
-  }
+  },
+  {
+  "title": "Random Fun Fact Generator",
+  "category": "utility",
+  "description": "A simple utility web app that displays a random fun fact each time the user interacts with it, focusing on clean UI, spacing, and instant content updates.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "link": "./projects/random-fun-fact-generator/index.html",
+  "icon": "ri-lightbulb-flash-line",
+  "coverStyle": "background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: white;"
+}
+
 
 ]
