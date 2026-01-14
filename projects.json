@@ -1,5 +1,21 @@
 [
   {
+    "title": "365 Days Progress Tracker",
+    "category": "utility",
+    "difficulty": "Intermediate",
+    "description": "Beautiful year progress visualizer with 365 interactive dots, streak tracking, multiple themes, and real-time progress statistics. Perfect for tracking yearly goals and productivity streaks.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SVG Animations",
+      "LocalStorage"
+    ],
+    "link": "./projects/365Days/index.html",
+    "icon": "ri-calendar-todo-line",
+    "coverStyle": "background: linear-gradient(135deg, #7C9D8E 0%, #5a7c5a 100%); color: white;"
+  },
+  {
     "title": "Conway's Game of Life",
     "category": "simulation",
     "difficulty": "Intermediate",
@@ -252,7 +268,7 @@
     "icon": "ri-notification-4-line",
     "coverStyle": "background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); color:#ffffff;"
   },
-   {
+  {
     "title": "Alarm Clock App",
     "category": "utility",
     "description": "A sleek alarm clock application with multiple alarm settings, snooze functionality, and customizable tones.",
@@ -304,7 +320,7 @@
     "icon": "ri-file-list-3-line",
     "coverStyle": "background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%); color:#1e40af;"
   },
-   {
+  {
     "title": "GIF search App",
     "category": "utility",
     "description": "Search and display GIFs using the Giphy API with pagination and trending features.",
@@ -756,7 +772,6 @@
     "title": "Tip Calculator",
     "category": "utility",
     "difficulty": "Beginner",
-    
     "description": "Calculate tips and split bills easily.",
     "tech": [
       "HTML",
@@ -855,15 +870,14 @@
     "category": "games",
     "description": "An insane-level word scramble game with neon-glass visuals, combo streaks, XP-based leveling, smart hints, and fast-paced brain challenges.",
     "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-   ],
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "./projects/word-scramble/index.html",
     "icon": "ri-brain-line",
     "coverStyle": "background: linear-gradient(135deg, #22ffcc, #00e5ff, #c77dff); color: #020617;"
   },
-
   {
     "title": "BMI Calculator",
     "category": "utility",
@@ -1023,7 +1037,10 @@
     ],
     "link": "./projects/Insta_bio_suggesstion/index.html",
     "icon": "ri-user-line",
-    "coverStyle": "background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); color: #7c2d12;"
+    "coverStyle": "background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); color: #7c2d12;",
+    "link": "./projects/counter/index.html",
+    "icon": "ri-add-circle-line",
+    "coverStyle": "background: #6366f1; color: white;"
   },
   {
     "title": "Chalo Canteen",
@@ -1277,6 +1294,20 @@
       "API"
     ],
     "link": "./projects/qr-code-generator/index.html",
+    "icon": "ri-qr-code-line",
+    "coverStyle": "background: #d1faf6; color: #0f766e;"
+  },
+  {
+    "title": "Multiplayer tic-tac-toe",
+    "category": "fun",
+    "description": "Play tic-tac-toe with friends online.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS",
+      "API"
+    ],
+    "link": "./projects/multiplayer tic-tac-toe/index.html",
     "icon": "ri-qr-code-line",
     "coverStyle": "background: #d1faf6; color: #0f766e;"
   },
@@ -1571,6 +1602,22 @@
     "icon": "ri-gamepad-line",
     "coverStyle": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: white;"
   },
+
+  {
+    "title": "Pattern Predictor Game",
+    "category": "game",
+    "description": "An interactive pattern prediction game that challenges users to identify and predict visual and logical patterns with increasing difficulty, featuring smooth animations and modern UI.",
+    "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+    "link": "./projects/pattern-predictor/index.html",
+    "icon": "ri-brain-line",
+    "coverStyle": "background: linear-gradient(135deg, #7c3aed, #22d3ee); color: white;"
+  },
+
+  
   {
     "title": "Truth or Dare",
     "category": "game",
@@ -1624,7 +1671,7 @@
     "icon": "ri-user-smile-line",
     "coverStyle": "background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #7c2d12;"
   },
-   {
+  {
     "title": "Markdown Previewer",
     "category": "utility",
     "description": "Real-time markdown preview editor with syntax highlighting.",
@@ -1794,51 +1841,51 @@
     "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #334155 100%); color:#f8fafc;"
   },
   {
-  "title": "Random Character Generator",
-  "category": "utility",
-  "description": "Generate a fictional character with random traits, strengths, and personality.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/Random_Character_Generator/index.html",
-  "icon": "ri-user-smile-line",
-  "coverStyle": "background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #7c2d12;"
-},
-{
-  "title": "Profile Editor Simulator",
-  "category": "utility",
-  "description": "Simulate editing a user profile with live preview and save/cancel actions.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/Profile_Editor_Simulator/index.html",
-  "icon": "ri-user-settings-line",
-  "coverStyle": "background: linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%); color:#1e3a8a;"
-},
-{
-  "title": "Settings Page Simulator",
-  "category": "utility",
-  "description": "Realistic app-style settings page with toggles, preferences, and saved state.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/Settings_Page_Simulator/index.html",
-  "icon": "ri-settings-3-line",
-  "coverStyle": "background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color:#0f172a;"
-},
-{
-  "title": "Virtual Control Panel",
-  "category": "utility",
-  "description": "Interactive control panel simulating system switches, indicators, and dependencies.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/Virtual_Control_Panel/index.html",
-  "icon": "ri-dashboard-2-line",
-  "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color:#f8fafc;"
-},
-{
-  "title": "Random Encounter Generator",
-  "category": "utility",
-  "description": "Generate random encounter scenarios with visual indicators and smooth animations.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/Random_Encounter_Generator/index.html",
-  "icon": "ri-sword-line",
-  "coverStyle": "background: linear-gradient(135deg, #064e3b 0%, #16a34a 100%); color:#ecfdf5;"
-},
-{
+    "title": "Random Character Generator",
+    "category": "utility",
+    "description": "Generate a fictional character with random traits, strengths, and personality.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Random_Character_Generator/index.html",
+    "icon": "ri-user-smile-line",
+    "coverStyle": "background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #7c2d12;"
+  },
+  {
+    "title": "Profile Editor Simulator",
+    "category": "utility",
+    "description": "Simulate editing a user profile with live preview and save/cancel actions.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Profile_Editor_Simulator/index.html",
+    "icon": "ri-user-settings-line",
+    "coverStyle": "background: linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%); color:#1e3a8a;"
+  },
+  {
+    "title": "Settings Page Simulator",
+    "category": "utility",
+    "description": "Realistic app-style settings page with toggles, preferences, and saved state.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Settings_Page_Simulator/index.html",
+    "icon": "ri-settings-3-line",
+    "coverStyle": "background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color:#0f172a;"
+  },
+  {
+    "title": "Virtual Control Panel",
+    "category": "utility",
+    "description": "Interactive control panel simulating system switches, indicators, and dependencies.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Virtual_Control_Panel/index.html",
+    "icon": "ri-dashboard-2-line",
+    "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color:#f8fafc;"
+  },
+  {
+    "title": "Random Encounter Generator",
+    "category": "utility",
+    "description": "Generate random encounter scenarios with visual indicators and smooth animations.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/Random_Encounter_Generator/index.html",
+    "icon": "ri-sword-line",
+    "coverStyle": "background: linear-gradient(135deg, #064e3b 0%, #16a34a 100%); color:#ecfdf5;"
+  },
+  {
     "title": "Drawing Canvas",
     "category": "game",
     "description": "A simple interactive canvas that lets users draw freely with adjustable brush size and color.",
@@ -2065,23 +2112,24 @@
     "coverStyle": "background: linear-gradient(135deg, #020617 0%, #22d3ee 100%); color:#ecfeff;"
   },
   {
-  "title": "GitHub Profile Score Finder",
-  "category": "utility",
-  "description": "A web-based tool that analyzes a GitHub user's profile and calculates a score based on repositories, stars, forks, followers, and activity using the GitHub API.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/github-profile-score-finder/index.html",
-  "icon": "ri-github-line",
-  "coverStyle": "background: linear-gradient(135deg, #24292e 0%, #57606a 100%);"
-},
-{
-  "title": "Internet Speed Tester",
-  "category": "utility",
-  "description": "Test your internet speed with this interactive tool.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/internet-speed-tester/index.html",
-  "icon": "ri-palette-line",
-  "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
-},{
+    "title": "GitHub Profile Score Finder",
+    "category": "utility",
+    "description": "A web-based tool that analyzes a GitHub user's profile and calculates a score based on repositories, stars, forks, followers, and activity using the GitHub API.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/github-profile-score-finder/index.html",
+    "icon": "ri-github-line",
+    "coverStyle": "background: linear-gradient(135deg, #24292e 0%, #57606a 100%);"
+  },
+  {
+    "title": "Internet Speed Tester",
+    "category": "utility",
+    "description": "Test your internet speed with this interactive tool.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/internet-speed-tester/index.html",
+    "icon": "ri-palette-line",
+    "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
+  },
+  {
     "title": "Internet Speed Tester",
     "category": "utility",
     "description": "Test your internet speed with this interactive tool.",
@@ -2110,14 +2158,14 @@
     "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #3b82f6;"
   },
   {
-  "title": "GitHub User Finder",
-  "category": "utility",
-  "description": "Search and explore GitHub user profiles with recent repositories in real time.",
-  "tech": ["HTML", "CSS", "JavaScript", "GitHub API"],
-  "link": "./projects/gitHub-user-finder/index.html",
-  "icon": "ri-github-fill",
-  "coverClass": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff;"
-  } ,
+    "title": "GitHub User Finder",
+    "category": "utility",
+    "description": "Search and explore GitHub user profiles with recent repositories in real time.",
+    "tech": ["HTML", "CSS", "JavaScript", "GitHub API"],
+    "link": "./projects/gitHub-user-finder/index.html",
+    "icon": "ri-github-fill",
+    "coverClass": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff;"
+  },
   {
     "title": "15 Sliding Puzzle",
     "category": "puzzle",
@@ -2754,14 +2802,14 @@
     "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
   },
   {
-  "title": "GitHub Profile Score Finder",
-  "category": "utility",
-  "description": "A web-based tool that analyzes a GitHub user's profile and calculates a score based on repositories, stars, forks, followers, and activity using the GitHub API.",
-  "tech": ["HTML", "CSS", "JS"],
-  "link": "./projects/github-profile-score-finder/index.html",
-  "icon": "ri-github-line",
-  "coverStyle": "background: linear-gradient(135deg, #24292e 0%, #57606a 100%);"
- },
+    "title": "GitHub Profile Score Finder",
+    "category": "utility",
+    "description": "A web-based tool that analyzes a GitHub user's profile and calculates a score based on repositories, stars, forks, followers, and activity using the GitHub API.",
+    "tech": ["HTML", "CSS", "JS"],
+    "link": "./projects/github-profile-score-finder/index.html",
+    "icon": "ri-github-line",
+    "coverStyle": "background: linear-gradient(135deg, #24292e 0%, #57606a 100%);"
+  },
   {
     "title": "Instagram Bio Suggestion",
     "category": "utility",
@@ -2788,7 +2836,7 @@
     "icon": "ri-fire-line",
     "coverStyle": "background: linear-gradient(135deg, #eff6ff 0%, #3b82f6 100%); color: #1e3a8a;"
   },
-    {
+  {
     "title": "Quantum Dice Roller",
     "category": "utility",
     "description": "Explore probability with quantum-entangled dice. When dice are entangled, their outcomes become correlated!",
@@ -2803,9 +2851,9 @@
   },
   {
     "title": "Sorting Algorithm",
-    "category":"utility",
+    "category": "utility",
     "description": "Build to make your Bubble, Insertion and Selection Sort concepts crystal clear through animation",
-    "tech":[
+    "tech": [
       "HTML",
       "CSS",
       "JavaScript"
@@ -2814,86 +2862,85 @@
     "icon": "ri-bubble-chart-line",
     "coverStyle": "background: #475569; color: #f8fafc;"
   },
-
-{
-  "title": "Pendulum Simulation",
-  "category": "physics",
-  "description": "Interactive simulation of a simple pendulum using real-world physics equations and canvas-based animation.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/pendulum-simulation/index.html",
-  "icon": "ri-compass-3-line",
-  "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;"
-},
-{
-  "title": "Text Styler / Fancy Font Generator",
-  "category": "utility",
-  "description": "Convert input text into styled or fancy Unicode fonts for social media with one-click copy.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/text-styler/index.html",
-  "icon": "ri-font-size-line",
-  "coverStyle": "background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: white;"
-},
-{
-  "title": "Tab / Window Organizer",
-  "category": "productivity",
-  "description": "Save and organize URLs by categories, open multiple tabs at once, and track last accessed.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/tab-organizer/index.html",
-  "icon": "ri-window-line",
-  "coverStyle": "background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%); color: white;"
-},
-{
-  "title": "Tab Focus Timer",
-  "category": "productivity",
-  "description": "Track time spent on each browser tab and display productivity stats.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/tab-focus-timer/index.html",
-  "icon": "ri-timer-line",
-  "coverStyle": "background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white;"
-},
-{
-  "title": "Emoji Invaders",
-  "category": "game",
-  "description": "A classic space-invader style arcade game where emoji enemies attack. Defeat them to score points and unlock motivational power-ups.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/emoji-invaders/index.html",
-  "icon": "ri-gamepad-line",
-  "coverStyle": "background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%); color: white;"
-},
-{
-  "title": "GitHub Repo Analyzer",
-  "category": "utility",
-  "description": "Paste any GitHub repository URL to instantly extract key insights like tech stack, commit activity, contributors, and project health.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "GitHub API"
-  ],
-  "link": "./projects/github-repo-analyzer/index.html",
-  "icon": "ri-github-line",
-  "coverStyle": "background: linear-gradient(135deg, #2f2f2f 0%, #6b7280 100%); color: white;"
-},
+  {
+    "title": "Pendulum Simulation",
+    "category": "physics",
+    "description": "Interactive simulation of a simple pendulum using real-world physics equations and canvas-based animation.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/pendulum-simulation/index.html",
+    "icon": "ri-compass-3-line",
+    "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;"
+  },
+  {
+    "title": "Text Styler / Fancy Font Generator",
+    "category": "utility",
+    "description": "Convert input text into styled or fancy Unicode fonts for social media with one-click copy.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/text-styler/index.html",
+    "icon": "ri-font-size-line",
+    "coverStyle": "background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: white;"
+  },
+  {
+    "title": "Tab / Window Organizer",
+    "category": "productivity",
+    "description": "Save and organize URLs by categories, open multiple tabs at once, and track last accessed.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/tab-organizer/index.html",
+    "icon": "ri-window-line",
+    "coverStyle": "background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%); color: white;"
+  },
+  {
+    "title": "Tab Focus Timer",
+    "category": "productivity",
+    "description": "Track time spent on each browser tab and display productivity stats.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/tab-focus-timer/index.html",
+    "icon": "ri-timer-line",
+    "coverStyle": "background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white;"
+  },
+  {
+    "title": "Emoji Invaders",
+    "category": "game",
+    "description": "A classic space-invader style arcade game where emoji enemies attack. Defeat them to score points and unlock motivational power-ups.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/emoji-invaders/index.html",
+    "icon": "ri-gamepad-line",
+    "coverStyle": "background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%); color: white;"
+  },
+  {
+    "title": "GitHub Repo Analyzer",
+    "category": "utility",
+    "description": "Paste any GitHub repository URL to instantly extract key insights like tech stack, commit activity, contributors, and project health.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub API"
+    ],
+    "link": "./projects/github-repo-analyzer/index.html",
+    "icon": "ri-github-line",
+    "coverStyle": "background: linear-gradient(135deg, #2f2f2f 0%, #6b7280 100%); color: white;"
+  },
   {
     "title": "Code Editor ",
     "category": "utility",
@@ -2907,20 +2954,20 @@
     "icon": "ri-terminal-box-line",
     "coverStyle": "background: #1e1e1e; color: #4fc3f7;"
   },
-    {
-"title": "Binary Brain - Guess the Number",
-"category": "utility",
-"description": "Visual demonstration of binary search algorithm. User guesses a number while computer shows binary search efficiency.",
-"tech": [
-"HTML",
-"CSS",
-"JS"
-],
-"link": "./projects/BinaryBrainGame/index.html",
-"icon": "ri-brain-line",
-"coverStyle": "background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%); color: white;"
-},
-{
+  {
+    "title": "Binary Brain - Guess the Number",
+    "category": "utility",
+    "description": "Visual demonstration of binary search algorithm. User guesses a number while computer shows binary search efficiency.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/BinaryBrainGame/index.html",
+    "icon": "ri-brain-line",
+    "coverStyle": "background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%); color: white;"
+  },
+  {
     "title": "Particle Life Simulation",
     "category": "game",
     "description": "An interactive particle system where complex, organic behaviors emerge from simple attraction and repulsion rules.",
@@ -2945,8 +2992,16 @@
   "tech": ["HTML", "CSS", "JavaScript"],
   "link": "./projects/chess-vs-computer/index.html",
   "icon": "ri-chess-line",
-  "coverClass": "chess-project-cover"
-}
+  "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #f5f5f5;"
 
-
+},
+{
+  "title": "Idea of the Day",
+  "category": "productivity",
+  "description": "A minimal daily inspiration web app that presents one curated idea per day, focused on projects, habits, and learning. Designed for simplicity, consistency, and distraction-free daily engagement.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "link": "https://yugenjr.github.io/IdeaOfTheDay/",
+  "icon": "ri-lightbulb-flash-line",
+  "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #020617 100%); color: #e5e7eb;"
+  }
 ]
