@@ -13,6 +13,35 @@
     "icon": "ri-grid-line",
     "coverStyle": "background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;"
   },
+    {
+  "title": "Mood Picker",
+  "category": "utility",
+  "difficulty": "Intermediate",
+  "description": "An interactive mood picker that lets users select how they’re feeling and receive personalized messages and motivational quotes. Features a clean UI, smooth animations, responsive design, mood-based feedback, and share functionality using the Web Share API.",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "link": "./projects/MoodPicker/index.html",
+  "icon": "ri-emotion-happy-line",
+  "coverStyle": "background: linear-gradient(135deg, #7db2ed 0%, #4a6fa5 100%); color: white;"
+},
+  {
+  "title": "Decision Spinner",
+  "category": "utility",
+  "difficulty": "Intermediate",
+  "description": "A beautiful pastel-themed decision spinner that helps users make choices by adding custom options and spinning an animated wheel. Features smooth animations, responsive layout, pastel color palette, option management, and instant random selection.",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "link": "./projects/decisionSpinner/index.html",
+  "icon": "ri-refresh-line",
+  "coverStyle": "background: linear-gradient(135deg, #8a7fcc 0%, #ff8ba7 100%); color: white;"
+}
+,
   {
     "title": "365 Days Progress Tracker",
     "category": "utility",
@@ -28,6 +57,62 @@
     "link": "./projects/365Days/index.html",
     "icon": "ri-calendar-todo-line",
     "coverStyle": "background: linear-gradient(135deg, #7C9D8E 0%, #5a7c5a 100%); color: white;"
+  },
+  {
+    "title": "CSS Box Shadow Generator",
+    "category": "utility",
+    "description": "Interactive tool to visually create and customize CSS box shadows with multiple layers, real-time preview, and instant CSS code generation.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/css-box-shadow-generator/index.html",
+    "icon": "ri-shadow-line",
+    "coverClass": "shadow-generator-cover"
+  },
+  {
+    "title": "Interactive Periodic Table",
+    "category": "educational",
+    "description": "Visually rich representation of chemical elements with color-coding, detailed information, and search functionality.",
+    "tech": [
+        "HTML",
+        "CSS",
+        "JS"
+    ],
+    "link": "./projects/InteractivePeriodicTable/index.html",
+    "icon": "fas fa-atom",
+    "coverClass": "periodic-table-cover"
+  },
+  {
+    "title": "Sorting Algorithm Visualizer",
+    "category": "Educational",
+    "description": "Visualize how different algorithms sort a scrambled dataset with real-time color-coded comparisons and swaps.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/SortingAlgorithmVisualizer/index.html",
+    "icon": "fa-sort-amount-down",
+    "coverClass": "sorting-visualizer-cover"
+  },
+  {
+    "title": "Physics Gravity Sandbox",
+    "category": "simulation",
+    "difficulty": "Advanced",
+    "description": "Interactive physics playground with gravity, friction, collisions, and object manipulation. Create balls, boxes, polygons, and stars with customizable properties in a dynamic physics environment.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Canvas API",
+      "Physics Engine",
+      "LocalStorage"
+    ],
+    "link": "./projects/PhysicsGravitySandbox/index.html",
+    "icon": "ri-planet-line",
+    "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #3b82f6 100%); color: white;"
   },
   {
     "title": "Conway's Game of Life",
@@ -231,6 +316,19 @@
     "link": "./projects/RoadSafetyQuiz/index.html",
     "icon": "ri-steering-2-line",
     "coverStyle": "background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white;"
+  },
+  {
+  "title": "Flappy Bird ",
+  "category": "game",
+  "description": "A polished Flappy Bird–style arcade game featuring smooth physics, start screen, collision detection, and score tracking, built with vanilla web technologies.",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "link": "./projects/flappy-bird/index.html",
+  "icon": "ri-gamepad-line",
+  "coverClass": "flappy-bird-cover"
   },
   {
     "title": "Image Preview Uploader",
