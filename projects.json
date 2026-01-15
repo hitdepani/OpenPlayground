@@ -327,6 +327,21 @@
   "icon": "ri-gamepad-line",
   "coverClass": "flappy-bird-cover"
   },
+
+  {
+    "title": "Space Invaders",
+    "category": "game",
+    "description": "A classic Space Invaders–style arcade shooter featuring responsive controls, enemy waves, collision detection, scoring system, and increasing difficulty, built with vanilla web technologies.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/space-invaders/index.html",
+    "icon": "ri-rocket-line",
+    "coverClass": "space-invaders-cover"
+  },
+
   {
     "title": "Image Preview Uploader",
     "category": "utility",
