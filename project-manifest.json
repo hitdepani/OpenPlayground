@@ -1302,6 +1302,11 @@
       "folder": "synthetic-exchange",
       "path": "./projects/synthetic-exchange/project.json",
       "link": "./projects/synthetic-exchange/index.html"
+    },
+    {
+      "folder": "VirtuF",
+      "path": "./projects/virtuf/project.json",
+      "link": "./projects/virtuf/index.html"
     }
 
   ]
