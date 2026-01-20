@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Complexity Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Code Complexity Analyzer</h1>
+  <button id="themeToggle">Toggle Theme</button>
+</header>
+
+<main>
+  <section class="editor">
+    <h2>Paste JavaScript Code</h2>
+    <textarea id="codeInput" placeholder="Paste your JavaScript code here..."></textarea>
+    <button id="analyzeBtn">Analyze Complexity</button>
+  </section>
+
+  <section class="results">
+    <h2>Analysis Results</h2>
+
+    <div class="card">
+      <p><strong>Estimated Time Complexity:</strong></p>
+      <h3 id="complexityOutput">—</h3>
+    </div>
+
+    <div class="meter">
+      <div id="meterFill"></div>
+    </div>
+
+    <ul class="stats">
+      <li>Functions: <span id="funcCount">0</span></li>
+      <li>Loops: <span id="loopCount">0</span></li>
+      <li>Max Nesting Depth: <span id="nestDepth">0</span></li>
+      <li>Recursion Detected: <span id="recursion">No</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Frontend Static Code Analyzer — OpenPlayground</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
