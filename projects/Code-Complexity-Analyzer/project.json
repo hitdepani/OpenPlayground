@@ -1,0 +1,7 @@
+{
+  "name": "Code Complexity Analyzer",
+  "description": "Frontend static analysis tool that estimates JavaScript time complexity by detecting loops, recursion, and nesting depth with a visual complexity meter.",
+  "tags": ["javascript", "big-o", "static-analysis", "developer-tools", "frontend"],
+  "level": "Intermediate",
+  "author": "Hit Depani"
+}
